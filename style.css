@@ -1,0 +1,134 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100vh;
+    background: linear-gradient(
+        rgba(196, 102, 0, 0.6),
+        rgba(155, 89, 182, 0.6)
+    );
+}
+
+h1, h2, h3 {
+    font-size: 1rem;
+}
+
+body {
+    margin-top: 40px;
+    font-family: montserrat, arial, verdana;
+    display: grid;
+    place-content: center;
+    font-size: 15px;
+    color: #2C3E50;
+}
+
+.container {
+    min-width: min(450px, 80vw);
+    text-align: center;
+}
+
+#progressbar {
+    counter-reset: step;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+#progressbar li {
+    list-style-type: none;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    float: left;
+    position: relative;
+    width: calc(100%/3);
+    color: #fff;
+}
+
+#progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    display: block;
+    width: 20px;
+    line-height: 20px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    margin: 0 auto 5px auto;
+    color: #000;
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    background-color: white;
+    height: 2px;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1;
+}
+
+#progressbar li:first-child:after {
+    content: none;
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #27AE60;
+    color: white;
+}
+
+.card {
+    background-color: #fff;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 0px 7px 4px rgba(30, 30, 30, 0.2);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2em 0.5em;
+}
+
+.card-title {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+input {
+    box-sizing: border-box;
+    width: 80%;
+    line-height: 40px;
+    margin-top: 10px;
+    padding-left: 1.5em;
+    border: 1px solid rgba(30, 30, 30, 0.2);
+}
+
+input::placeholder  {
+    color: rgba(30, 30, 30, 0.5);
+}
+
+.btn {
+    box-sizing: border-box;
+    width: 40%;
+    margin-top: 20px;
+    line-height: 30px;
+    color: #fff;
+    background-color: #27AE60;
+    border: none;
+    border-radius: 2px;
+}
+
+.btn:hover {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px  #27AE60;
+    border-radius: 0;
+}
