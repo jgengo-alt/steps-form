@@ -27,4 +27,8 @@ Training front-end by redoing a cool project found online with steps using CSS 3
 
 ### ❖ Screenshots
 
-![Design preview for the login page 02](./.github/docs/screenshot01.png)
+![Design preview for the step 1](./.github/docs/screenshot01.png)
+
+![Design preview for the step 2](./.github/docs/screenshot02.png)
+
+![Design preview for the step 3](./.github/docs/screenshot03.png)
