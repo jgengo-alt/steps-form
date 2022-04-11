@@ -31,6 +31,12 @@ body {
     text-align: center;
 }
 
+.wrapper {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+
 #progressbar {
     counter-reset: step;
     margin-bottom: 30px;
@@ -87,10 +93,14 @@ body {
     margin: 0 auto;
     border-radius: 5px;
     box-shadow: 0 0px 7px 4px rgba(30, 30, 30, 0.2);
+    display: none;
+    padding: 2em 0.5em;
+}
+
+.card.active {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 2em 0.5em;
 }
 
 .card-title {
@@ -131,4 +141,16 @@ input::placeholder  {
 .btn:hover {
     box-shadow: 0 0 0 2px white, 0 0 0 3px  #27AE60;
     border-radius: 0;
+}
+
+.fa-solid {
+    border-radius: 3px;
+    border: 1px solid rgba(30, 30, 30, 0.1);
+    zoom: 2;
+    padding: 0.3em;
+    cursor: pointer;
+}
+
+.fa-solid.active {
+    border: 1px solid #27AE60;
 }
